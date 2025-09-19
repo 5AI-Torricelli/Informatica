@@ -4,19 +4,25 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.ArrayList;
 
+// Classe per gestire un registro di alunni
 public class Registro {
+  // File del registro
   public String file;
+  // Arraylist per contenere gli alunni
   public ArrayList<Alunno> alunni = new ArrayList<Alunno>();
 
+  // Costruttore per inizializzare il registro
   public Registro(String file) {
     this.file = file;
   }
 
+  // Stampa tutti gli alunni selezionando le colonne da stampare
   public void stampaAlunni(String[] colonneSelezionate) {
     String risultato;
     for (Alunno alunno : alunni) {
       risultato = "";
       risultato += String.format("Alunno %s %s\n", alunno.getNome(), alunno.getCognome());
+      // Se la colonna selezionata contiene "X", stampa la colonna
       if (colonneSelezionate[0] == "X") {
         risultato += String.format("Nome: %s\n", alunno.getNome());
       }
@@ -29,16 +35,19 @@ public class Registro {
       if (colonneSelezionate[3] == "X") {
         risultato += String.format("Classe: %s\n", alunno.getClasse());
       }
+      // Stampa il risultato
       System.out.println(risultato);
     }
   }
 
+  // Stampa tutti gli alunni
   public void stampaAlunni() {
     for (Alunno alunno : alunni) {
       System.out.println(alunno.toString());
     }
   }
 
+  // Aggiunge un alunno al registro
   public void aggiungiAlunno(String nome, String cognome, int eta, String classe) {
     Alunno alunno = new Alunno();
     alunno.setNome(nome);
@@ -48,6 +57,7 @@ public class Registro {
     alunni.add(alunno);
   }
 
+  // Leggi il file e carica il registro
   public void leggiFile() {
     try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
       String line;
@@ -61,6 +71,7 @@ public class Registro {
     }
   }
 
+  // Salva il file
   public void salvaFile() {
     try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
       String header = reader.readLine(); // Leggiamo la prima riga del file per preservare gli header
