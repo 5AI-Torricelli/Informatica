@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Esempio di file XML che organizza un database di persone.
+  Struttura:
+    - PeopleDatabase: radice con metadati e lista di Person
+    - Person: elemento per ogni individuo con id univoco
+    - Contact: email, phone
+    - Address: street, city, postcode, country
+    - Employment: company, role, since
+    - Tags: tag multipli per filtrare/etichettare
+    - Created/Updated: timestamp ISO 8601
+  Puoi adattare campi/attributi a piacere.
+-->
+<PeopleDatabase generatedBy="ChatGPT" generatedOn="2025-09-22T00:00:00+02:00" version="1.0">
+  <Metadata>
+    <Description>Database di esempio per la gestione di persone.</Description>
+    <RecordCount>5</RecordCount>
+  </Metadata>
+
+  <People>
+    <Person id="p0001">
+      <Name>
+        <Given>Marco</Given>
+        <Family>Rossi</Family>
+        <Full>Marco Rossi</Full>
+      </Name>
+      <DOB>1985-04-12</DOB>
+      <Contact>
+        <Email>marco.rossi@example.com</Email>
+        <Phone type="mobile">+39-345-1234567</Phone>
+      </Contact>
+      <Address>
+        <Street>Via Roma 10</Street>
+        <City>Milano</City>
+        <Postcode>20100</Postcode>
+        <Country>IT</Country>
+      </Address>
+      <Employment>
+        <Company>ACME Srl</Company>
+        <Role>Software Engineer</Role>
+        <Since>2015-06-01</Since>
+      </Employment>
+      <Tags>
+        <Tag>sviluppo</Tag>
+        <Tag>full-time</Tag>
+      </Tags>
+      <Notes>Preferisce contatto via email.</Notes>
+      <Created>2020-01-20T09:30:00+01:00</Created>
+      <Updated>2024-11-15T14:12:00+01:00</Updated>
+    </Person>
+
+    <Person id="p0002">
+      <Name>
+        <Given>Lucia</Given>
+        <Family>Bianchi</Family>
+        <Full>Lucia Bianchi</Full>
+      </Name>
+      <DOB>1990-09-01</DOB>
+      <Contact>
+        <Email>lucia.bianchi@example.org</Email>
+        <Phone type="home">+39-02-9876543</Phone>
+      </Contact>
+      <Address>
+        <Street>Corso Vittorio Emanuele 45</Street>
+        <City>Torino</City>
+        <Postcode>10100</Postcode>
+        <Country>IT</Country>
+      </Address>
+      <Employment>
+        <Company>Studio Gamma</Company>
+        <Role>Commercialista</Role>
+        <Since>2018-02-15</Since>
+      </Employment>
+      <Tags>
+        <Tag>consulenza</Tag>
+        <Tag>part-time</Tag>
+      </Tags>
+      <Notes>Disponibile solo il pomeriggio.</Notes>
+      <Created>2021-03-12T11:00:00+01:00</Created>
+      <Updated>2023-08-01T09:00:00+02:00</Updated>
+    </Person>
+
+    <Person id="p0003">
+      <Name>
+        <Given>Giovanni</Given>
+        <Family>Verdi</Family>
+        <Full>Giovanni Verdi</Full>
+      </Name>
+      <DOB>1978-12-30</DOB>
+      <Contact>
+        <Email>g.verdi@company-example.com</Email>
+        <Phone type="work">+39-06-33221100</Phone>
+      </Contact>
+      <Address>
+        <Street>Via del Corso 100</Street>
+        <City>Roma</City>
+        <Postcode>00186</Postcode>
+        <Country>IT</Country>
+      </Address>
+      <Employment>
+        <Company>Industrie Delta</Company>
+        <Role>Responsabile Produzione</Role>
+        <Since>2010-09-01</Since>
+      </Employment>
+      <Tags>
+        <Tag>management</Tag>
+        <Tag>senior</Tag>
+      </Tags>
+      <Notes>Ha certificazione ISO; lingua madre italiano, parla inglese.</Notes>
+      <Created>2019-07-05T08:15:00+02:00</Created>
+      <Updated>2025-02-10T17:45:00+01:00</Updated>
+    </Person>
+
+    <Person id="p0004">
+      <Name>
+        <Given>Anna</Given>
+        <Family>Russo</Family>
+        <Full>Anna Russo</Full>
+      </Name>
+      <DOB>1997-06-22</DOB>
+      <Contact>
+        <Email>anna.russo@example.net</Email>
+        <Phone type="mobile">+39-348-5551212</Phone>
+      </Contact>
+      <Address>
+        <Street>Piazza San Marco 2</Street>
+        <City>Venezia</City>
+        <Postcode>30100</Postcode>
+        <Country>IT</Country>
+      </Address>
+      <Employment>
+        <Company>Freelance</Company>
+        <Role>Graphic Designer</Role>
+        <Since>2020-05-10</Since>
+      </Employment>
+      <Tags>
+        <Tag>freelance</Tag>
+        <Tag>design</Tag>
+      </Tags>
+      <Notes>Portfolio disponibile su richiesta.</Notes>
+      <Created>2022-06-01T12:00:00+02:00</Created>
+      <Updated>2024-06-20T10:30:00+02:00</Updated>
+    </Person>
+
+    <Person id="p0005">
+      <Name>
+        <Given>Paolo</Given>
+        <Family>Ferrari</Family>
+        <Full>Paolo Ferrari</Full>
+      </Name>
+      <DOB>1969-01-15</DOB>
+      <Contact>
+        <Email>paolo.ferrari@oldmail.com</Email>
+        <Phone type="home">+39-011-223344</Phone>
+      </Contact>
+      <Address>
+        <Street>Strada Provinciale 9</Street>
+        <City>Genova</City>
+        <Postcode>16100</Postcode>
+        <Country>IT</Country>
+      </Address>
+      <Employment>
+        <Company>Retired</Company>
+        <Role>Consulente</Role>
+        <Since>--</Since>
+      </Employment>
+      <Tags>
+        <Tag>pensionato</Tag>
+        <Tag>consulenza</Tag>
+      </Tags>
+      <Notes>Non più attivo; contatto telefonico preferito.</Notes>
+      <Created>2018-10-10T09:00:00+01:00</Created>
+      <Updated>2020-12-31T16:00:00+01:00</Updated>
+    </Person>
+  </People>
+</PeopleDatabase>
